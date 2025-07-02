@@ -18,4 +18,4 @@ Upcoming Features:
 
 
 #
-Currently uses VS localDB so when installing make sure any .DB files are in the same directory as the .exe
+Currently uses VS localDB so when installing make sure any .mdf files are in the same directory as the .exe
