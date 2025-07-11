@@ -18,10 +18,14 @@ namespace QuarterMaster_System
         {
             InitializeComponent();
 
+            // Maximize only at runtime
+            this.WindowState = FormWindowState.Maximized;
+
             if (GlobalVariables.elevatedPrivileges == true)
             {
                 btnLogIn.Text = "Log Out";
             }
+
             
         }
 
