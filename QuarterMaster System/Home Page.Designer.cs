@@ -111,6 +111,7 @@
             this.btnEquipmentList.TabIndex = 4;
             this.btnEquipmentList.Text = "Equipment Lists";
             this.btnEquipmentList.UseVisualStyleBackColor = true;
+            this.btnEquipmentList.Click += new System.EventHandler(this.btnEquipmentList_Click);
             // 
             // btnEquipmentSearch
             // 

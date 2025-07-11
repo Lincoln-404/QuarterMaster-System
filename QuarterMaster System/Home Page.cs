@@ -37,7 +37,13 @@ namespace QuarterMaster_System
             this.Show(); // Show this form again after the other one closes
         }
 
-        
+        private void btnEquipmentList_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide current form
+            EquipmentLists equipmentLists = new EquipmentLists();
+            equipmentLists.ShowDialog(); // Blocks until the new form is closed
+            this.Show();
+        }
     }
 
     public static class GlobalVariables
