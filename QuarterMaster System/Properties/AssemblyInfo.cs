@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build number (eg 1 = Aplha, 2 = Beta, 3 = prerelease, 00 = release)
 //      Revision
 //
-[assembly: AssemblyVersion("1.00.01.10")] 
-[assembly: AssemblyFileVersion("1.00.01.10")]
+[assembly: AssemblyVersion("1.00.01.20")] 
+[assembly: AssemblyFileVersion("1.00.01.20")]

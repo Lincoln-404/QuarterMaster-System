@@ -24,9 +24,9 @@ namespace QuarterMaster_System
 
         public Equipment_Search()
         {
-            InitializeComponent(); 
+            InitializeComponent();
 
-            
+
             /*int numberOfItems = 30; // Set this to however many items you want to test
 
             for (int i = 0; i < numberOfItems; i++)
@@ -43,6 +43,8 @@ namespace QuarterMaster_System
                 flpEquipmentScroll.Controls.Add(itemExample);
             }
             */
+
+            this.WindowState = FormWindowState.Maximized;
 
             LoadInventoryItems(); // Load items from the database into the flow layout panel
 

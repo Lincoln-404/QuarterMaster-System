@@ -76,6 +76,12 @@
     <Compile Include="EquipmentItemControl.Designer.cs">
       <DependentUpon>EquipmentItemControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipment Lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipment Lists.Designer.cs">
+      <DependentUpon>Equipment Lists.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EquipmentItemControl.resx">
       <DependentUpon>EquipmentItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipment Lists.resx">
+      <DependentUpon>Equipment Lists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home Page.resx">
       <DependentUpon>Home Page.cs</DependentUpon>
