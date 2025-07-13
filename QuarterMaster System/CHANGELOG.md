@@ -11,5 +11,5 @@
 - fixed a bug causing the Home Page not to be centered
 
 ### Known Issues
-- buttons equipment list, reports, calendar and log in currently not functional.
+- buttons reports, calendar and log in currently not functional.
 - Visuals when loading and searching equipment very choppy.
