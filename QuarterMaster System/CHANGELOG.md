@@ -4,7 +4,7 @@
 ## Internal Assembly version: 1.0.01.20
 
 ### Added
-- 
+- throughly went through and commented all code files
 
 ### Bugs Fixed
 - fixed a bug that was causing the forms to not be at a base size of 1920 * 1080

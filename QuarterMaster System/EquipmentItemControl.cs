@@ -109,8 +109,8 @@ namespace QuarterMaster_System
             // Create a new Form to host the MoreMenuControl
             using (Form overlayForm = new Form())
             {
-                MoreMenuControl moreMenu = new MoreMenuControl(itemID, overlayForm);
-
+                MoreMenuControl moreMenu = new MoreMenuControl(itemID, overlayForm); // Create an instance of MoreMenuControl with the current item ID and the overlay form
+                // Set properties for the overlay form
                 overlayForm.FormBorderStyle = FormBorderStyle.None;
                 overlayForm.StartPosition = FormStartPosition.CenterParent;
                 overlayForm.ShowInTaskbar = false;
@@ -130,8 +130,8 @@ namespace QuarterMaster_System
 
                 // Add your MoreMenuControl to the form
 
-                moreMenu.Dock = DockStyle.Fill;
-                overlayForm.Controls.Add(moreMenu);
+                moreMenu.Dock = DockStyle.Fill; // Fill the overlay form with the MoreMenuControl
+                overlayForm.Controls.Add(moreMenu); // Add the MoreMenuControl to the overlay form
 
                 // Show as a dialog (modal) or use Show() for non-modal
                 overlayForm.ShowDialog();
