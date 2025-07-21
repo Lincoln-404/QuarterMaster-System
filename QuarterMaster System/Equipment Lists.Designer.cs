@@ -81,9 +81,9 @@
             this.tlpParentListScroll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tlpParentListScroll.AutoScroll = true;
             this.tlpParentListScroll.ColumnCount = 3;
-            this.tlpParentListScroll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 703F));
+            this.tlpParentListScroll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 706F));
             this.tlpParentListScroll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpParentListScroll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 699F));
+            this.tlpParentListScroll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 706F));
             this.tlpParentListScroll.Controls.Add(this.flpLeftListScroll, 0, 0);
             this.tlpParentListScroll.Controls.Add(this.flpRightListScroll, 2, 0);
             this.tlpParentListScroll.Location = new System.Drawing.Point(157, 194);
@@ -98,15 +98,15 @@
             this.flpLeftListScroll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpLeftListScroll.Location = new System.Drawing.Point(3, 3);
             this.flpLeftListScroll.Name = "flpLeftListScroll";
-            this.flpLeftListScroll.Size = new System.Drawing.Size(697, 825);
+            this.flpLeftListScroll.Size = new System.Drawing.Size(700, 825);
             this.flpLeftListScroll.TabIndex = 0;
             // 
             // flpRightListScroll
             // 
             this.flpRightListScroll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpRightListScroll.Location = new System.Drawing.Point(918, 3);
+            this.flpRightListScroll.Location = new System.Drawing.Point(911, 3);
             this.flpRightListScroll.Name = "flpRightListScroll";
-            this.flpRightListScroll.Size = new System.Drawing.Size(693, 825);
+            this.flpRightListScroll.Size = new System.Drawing.Size(700, 825);
             this.flpRightListScroll.TabIndex = 1;
             // 
             // EquipmentLists
