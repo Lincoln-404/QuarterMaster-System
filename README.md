@@ -19,3 +19,6 @@ Upcoming Features:
 
 #
 Currently uses VS localDB so when installing make sure any .mdf files are in the same directory as the .exe
+
+#
+This is currently a WIP school project meaning that if some things seem odd or rushed they are done that way for school criterea and should be cleaned up by the end of the year
