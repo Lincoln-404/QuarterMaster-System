@@ -27,6 +27,8 @@ namespace QuarterMaster_System
 
         public event EventHandler NumberOfItemsChanged; // Event to notify when the number of items changes
 
+         
+
         public EquipmentItemControl()
         {
             InitializeComponent(); // Initialize the component, which sets up the UI elements
@@ -173,13 +175,14 @@ namespace QuarterMaster_System
                 {
                     try
                     {
-                        ItemAdded?.Invoke(this, EventArgs.Empty); // Raise the ItemAdded event if there are any subscribers
+                        
                         conn.Open(); // Open the SQL connection
                         cmd.Parameters.AddWithValue("@listID", listID); // Set the ListID parameter
                         cmd.Parameters.AddWithValue("@itemID", itemID); // Set the ItemID parameter
                         cmd.Parameters.AddWithValue("@quantity", NumberofItems); // Set the quantity to 1 for adding an item
                         cmd.ExecuteNonQuery(); // Execute the insert command
-                        
+                        ItemAdded?.Invoke(this, EventArgs.Empty); // Raise the ItemAdded event if there are any subscribers
+
                     }
                     catch (Exception ex)
                     {

@@ -1,10 +1,10 @@
-﻿using System; // Provides base class libraries for fundamental types
-using System.Collections.Generic; // Provides generic collection classes
-using System.ComponentModel; // Provides classes for component and control design
-using System.Data; // Provides access to ADO.NET basic data classes
-using System.Data.SqlClient; // Provides classes for SQL Server database access
-using System.Drawing; // Provides access to GDI+ graphics functionality
-using System.Linq; // Provides LINQ query capabilities
+﻿using System; 
+using System.Collections.Generic; 
+using System.ComponentModel; 
+using System.Data; 
+using System.Data.SqlClient; 
+using System.Drawing; 
+using System.Linq; 
 using System.Text; 
 using System.Threading.Tasks; 
 using System.Windows.Forms; 
@@ -102,7 +102,7 @@ namespace QuarterMaster_System.Controls
         /// </summary>
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            // No implementation provided
+            // This button is intended for booking functionality, but currently does nothing.
         }
 
         /// <summary>

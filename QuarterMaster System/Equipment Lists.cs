@@ -94,7 +94,51 @@ namespace QuarterMaster_System
                     MessageBox.Show("Error loading equipment lists: " + ex.Message);
                 }
             }
-            
+
         }
-    }
+
+        private void btnNewList_Click(object sender, EventArgs e)
+        {
+            using (Form overlayForm = new Form())
+            {
+                NewListControl createListControl = new NewListControl(overlayForm);
+
+                overlayForm.FormBorderStyle = FormBorderStyle.None;
+                overlayForm.StartPosition = FormStartPosition.CenterParent;
+                overlayForm.ShowInTaskbar = false;
+                overlayForm.BackColor = Color.White;
+                overlayForm.Size = new Size(createListControl.Width, createListControl.Height); // Adjust size as needed
+
+                // Position the overlay near the More button
+                //var screenPoint = btnMore.PointToScreen(new Point(0, btnMore.Height));
+                //overlayForm.Location = screenPoint;
+
+                // Subscribe to the MoreMenuControl's ItemDeleted event
+                //AddItemMenu.ItemAdded += (s, args) => LoadEquipmentList();
+
+
+                // Add your MoreMenuControl to the form
+
+                createListControl.Dock = DockStyle.Fill;
+                overlayForm.Controls.Add(createListControl);
+
+                createListControl.openNew += (s, args) =>
+                {
+                    loadEquipmentList(); // When a new list is created, reload the equipment list
+                    this.Hide(); // Hide the current form when a new list is created
+                };
+
+                createListControl.ItemDeleted += (s, args) =>
+                {
+                    // When an item is deleted, reload the equipment list
+                    loadEquipmentList();
+                };
+
+                // Show as a dialog (modal) or use Show() for non-modal
+                overlayForm.ShowDialog();
+
+                
+            }
+        }        
+    }    
 }

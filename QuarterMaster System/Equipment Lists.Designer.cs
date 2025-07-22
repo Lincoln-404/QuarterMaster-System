@@ -75,6 +75,7 @@
             this.btnNewList.TabIndex = 1;
             this.btnNewList.Text = "New List";
             this.btnNewList.UseVisualStyleBackColor = true;
+            this.btnNewList.Click += new System.EventHandler(this.btnNewList_Click);
             // 
             // tlpParentListScroll
             // 

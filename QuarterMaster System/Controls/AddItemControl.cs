@@ -49,7 +49,9 @@ namespace QuarterMaster_System
 
         // Stores multiple selected availabilities for filtering.
         // HashSet<string> is used for fast lookup and uniqueness, with case-insensitive comparison.
-        private HashSet<string> selectedAvailabilities = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        private HashSet<string> selectedAvailabilities = new HashSet<string>(StringComparer.OrdinalIgnoreCase); 
+
+        public event EventHandler ItemAdded; // Event to notify when a list is opened; EventHandler is used for simplicity
 
         /// <summary>
         /// Constructor for AddItemControl.
@@ -116,7 +118,8 @@ namespace QuarterMaster_System
                             itemControl.ItemAdded += (s, args) =>
                             {
                                 itemControl.NumbItems = (int)nudNumItem.Value; // nudNumItem is a NumericUpDown control, so cast Value to int
-                            };
+                                ItemAdded?.Invoke(this, EventArgs.Empty); // Raise the ItemAdded event to notify subscribers
+                            };                            
                             // When the ItemAdded event is raised, close the overlay form
                             itemControl.ItemAdded += (s, args) => overlayform.Close();
                             // Set the action button to "Add" mode
