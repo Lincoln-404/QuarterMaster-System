@@ -61,7 +61,7 @@
             // btnAddItem
             // 
             this.btnAddItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddItem.Location = new System.Drawing.Point(1824, 2);
+            this.btnAddItem.Location = new System.Drawing.Point(1622, 2);
             this.btnAddItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(192, 81);
@@ -130,7 +130,7 @@
             this.tlpTitelBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.44885F));
             this.tlpTitelBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.9979F));
             this.tlpTitelBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.09859F));
-            this.tlpTitelBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tlpTitelBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tlpTitelBar.Controls.Add(this.lblCategory, 2, 0);
             this.tlpTitelBar.Controls.Add(this.lblAvailability, 6, 0);
             this.tlpTitelBar.Controls.Add(this.label1, 5, 0);
@@ -163,7 +163,7 @@
             this.lblAvailability.AutoSize = true;
             this.lblAvailability.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAvailability.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailability.Location = new System.Drawing.Point(1682, 0);
+            this.lblAvailability.Location = new System.Drawing.Point(1501, 0);
             this.lblAvailability.Name = "lblAvailability";
             this.lblAvailability.Size = new System.Drawing.Size(252, 86);
             this.lblAvailability.TabIndex = 5;
@@ -175,9 +175,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1298, 0);
+            this.label1.Location = new System.Drawing.Point(1158, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 86);
+            this.label1.Size = new System.Drawing.Size(337, 69);
             this.label1.TabIndex = 4;
             this.label1.Text = "Storage Location";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,9 +187,9 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(1089, 0);
+            this.lblQuantity.Location = new System.Drawing.Point(971, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(203, 86);
+            this.lblQuantity.Size = new System.Drawing.Size(181, 69);
             this.lblQuantity.TabIndex = 3;
             this.lblQuantity.Text = "Quantity";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,7 +201,7 @@
             this.lblSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerial.Location = new System.Drawing.Point(761, 0);
             this.lblSerial.Name = "lblSerial";
-            this.lblSerial.Size = new System.Drawing.Size(322, 86);
+            this.lblSerial.Size = new System.Drawing.Size(287, 69);
             this.lblSerial.TabIndex = 2;
             this.lblSerial.Text = "Serial";
             this.lblSerial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

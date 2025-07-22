@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,16 +70,22 @@
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlExtensions.cs" />
+    <Compile Include="Controls\EquipmentListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EquipmentListControl.Designer.cs">
+      <DependentUpon>EquipmentListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Equipment Search.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Equipment Search.Designer.cs">
       <DependentUpon>Equipment Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentItemControl.cs">
+    <Compile Include="Controls\EquipmentItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EquipmentItemControl.Designer.cs">
+    <Compile Include="Controls\EquipmentItemControl.Designer.cs">
       <DependentUpon>EquipmentItemControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Equipment Lists.cs">
@@ -92,21 +100,18 @@
     <Compile Include="Home Page.Designer.cs">
       <DependentUpon>Home Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="MoreMenuControl.cs">
+    <Compile Include="Controls\MoreMenuControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MoreMenuControl.Designer.cs">
+    <Compile Include="Controls\MoreMenuControl.Designer.cs">
       <DependentUpon>MoreMenuControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Calendar.resx">
-      <DependentUpon>Calendar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Equipment Search.resx">
       <DependentUpon>Equipment Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EquipmentItemControl.resx">
+    <EmbeddedResource Include="Controls\EquipmentItemControl.resx">
       <DependentUpon>EquipmentItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipment Lists.resx">
@@ -115,7 +120,7 @@
     <EmbeddedResource Include="Home Page.resx">
       <DependentUpon>Home Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoreMenuControl.resx">
+    <EmbeddedResource Include="Controls\MoreMenuControl.resx">
       <DependentUpon>MoreMenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
