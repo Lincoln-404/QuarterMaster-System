@@ -55,10 +55,11 @@ namespace QuarterMaster_System
         /// </summary>
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            this.Hide(); // Hide current form
+            /*this.Hide(); // Hide current form
             Calendar calendar = new Calendar(); // Initialize the Calendar form
             calendar.ShowDialog(); // Blocks until the new form is closed
-            this.Show(); // Show this form again after the other one closes
+            this.Show(); // Show this form again after the other one closes\
+            */
         }
     }
 

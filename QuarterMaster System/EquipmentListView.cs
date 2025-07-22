@@ -89,9 +89,17 @@ namespace QuarterMaster_System
                                     ItemID = Convert.ToInt32(reader["itemID"]), // Set the item ID
                                     Quantity = reader["quantity"].ToString(), // Set the item quantity
                                     StorageLocation = reader["storageLocation"].ToString(), // Set the storage location
-                                    Availability = reader["available"].ToString() // Set the availability
+                                    Availability = reader["available"].ToString(), // Set the availability
+                                    ListID =  listID, // Set the ListID for the item control
                                 };
-                                itemControl.EnableMoreButton(false); // Disable the more button
+
+                                itemControl.DeleteButton();
+                                itemControl.ItemDeleted += (s, args) =>
+                                {
+                                    // Refresh the equipment list when an item is deleted
+                                    LoadEquipmentList();
+                                };
+
                                 flpListItemScroll.Controls.Add(itemControl); // Add the item control to the flow layout panel
                             }
                         }

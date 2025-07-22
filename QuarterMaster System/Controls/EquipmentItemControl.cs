@@ -17,7 +17,7 @@ namespace QuarterMaster_System
 
         public event EventHandler ItemDeleted;
 
-        private bool isMorebtn = true; // Flag to check if the More button is enabled
+        private string btnActionMode = "more"; // Flag to check if the More button is enabled
 
         private int listID; // Backing field for ListID property
 
@@ -104,13 +104,13 @@ namespace QuarterMaster_System
             }
         }
 
-        public Button MoreButton
+        public Button ActionButton
         {
-            get => btnMore; // Property to get the More button, allowing external code to access it
+            get => btnAction; // Property to get the More button, allowing external code to access it
             set
             {
-                btnMore = value; // Set the More button to the provided value
-                btnMore.AutoFitFont(8); // Adjust font size to fit the button
+                btnAction = value; // Set the More button to the provided value
+                btnAction.AutoFitFont(8); // Adjust font size to fit the button
             }
         }
 
@@ -129,7 +129,7 @@ namespace QuarterMaster_System
 
         private void btnMore_Click(object sender, EventArgs e)
         {
-            if (isMorebtn == true)
+            if (btnActionMode == "more")
             {
                 // Create a new Form to host the MoreMenuControl
                 using (Form overlayForm = new Form())
@@ -162,7 +162,7 @@ namespace QuarterMaster_System
                     overlayForm.ShowDialog();
                 }
             }
-            else
+            else if (btnActionMode == "add") 
             {
                 
                 string connectionString = GlobalVariables.GetConnectionString();
@@ -173,12 +173,13 @@ namespace QuarterMaster_System
                 {
                     try
                     {
+                        ItemAdded?.Invoke(this, EventArgs.Empty); // Raise the ItemAdded event if there are any subscribers
                         conn.Open(); // Open the SQL connection
                         cmd.Parameters.AddWithValue("@listID", listID); // Set the ListID parameter
                         cmd.Parameters.AddWithValue("@itemID", itemID); // Set the ItemID parameter
                         cmd.Parameters.AddWithValue("@quantity", NumberofItems); // Set the quantity to 1 for adding an item
                         cmd.ExecuteNonQuery(); // Execute the insert command
-                        ItemAdded?.Invoke(this, EventArgs.Empty); // Raise the ItemAdded event if there are any subscribers
+                        
                     }
                     catch (Exception ex)
                     {
@@ -186,18 +187,43 @@ namespace QuarterMaster_System
                     }
                 }
             }
+            else if (btnActionMode == "delete")
+            {
+                string connectionString = GlobalVariables.GetConnectionString();
+                string query = "DELETE FROM listItemsTable WHERE listID = @listID AND itemID = @itemID";
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this list?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                        try
+                        {
+                            
+                            conn.Open(); // Open the SQL connection
+                            cmd.Parameters.AddWithValue("@listID", listID); // Set the ListID parameter
+                            cmd.Parameters.AddWithValue("@itemID", itemID); // Set the ItemID parameter
+                            cmd.ExecuteNonQuery(); // Execute the delete command
+                            ItemDeleted?.Invoke(this, EventArgs.Empty); // Raise the ItemDeleted event if there are any subscribers
+                        }
+                        catch (Exception ex)
+                        {
+                        MessageBox.Show("Error deleting item from list: " + ex.Message); // Show error message if any exception occurs
+                        }
+                }
+            }
         }
 
-        public void EnableMoreButton(bool enable)
+        public void DeleteButton()
         {
-            btnMore.Enabled = enable; // Enable or disable the More button based on the parameter
-            btnMore.Visible = enable; // Also set visibility to match the enabled state
+            btnAction.Text = "Delete"; // Change the button text to "Delete"
+            btnActionMode = "delete"; // Set the flag to indicate this is a delete button
+
         }
 
         public void Addbutton()
         {
-            btnMore.Text = "Add"; // Change the button text to "Add"
-            isMorebtn = false; // Set the flag to indicate this is not a More button
+            btnAction.Text = "Add"; // Change the button text to "Add"
+            btnActionMode = "add"; // Set the flag to indicate this is not a add button
         }
     }
 }
