@@ -131,6 +131,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuarterMasterDBDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\AddItemControl.resx">
       <DependentUpon>AddItemControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,11 +1,10 @@
 # Changelog
 
-## 1.00 [Alpha 2a] -  
-## Internal Assembly version: 1.0.01.20
+## 1.00 [Alpha 3a] -  
+## Internal Assembly version: 1.0.01.30
 
 ### Added
-- started to thoroughly go through and commented all code files
-- Add the equipment list module allowing for the creation, modifing and deleting of equipment lists
+- 
 
 ### Bugs Fixed
 -
