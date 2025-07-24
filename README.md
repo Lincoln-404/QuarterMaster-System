@@ -1,5 +1,5 @@
 # QuarterMaster System QMS
-# Release Version: 1.00 Alpha 1a
+# Release Version: 1.00 Alpha 3a
 A system to manage equipment inventory with booking calendar list creation and more
 
 Current functionality:
