@@ -128,5 +128,68 @@ namespace QuarterMaster_System
         {
             this.Close(); // Close the Calendar form and return to the previous form
         }
+
+        private void btnNewItem_Click(object sender, EventArgs e)
+        {
+            using (Form overlayForm = new Form())
+            {
+                NewBoookingControl AddBooking = new NewBoookingControl(overlayForm);
+
+                overlayForm.FormBorderStyle = FormBorderStyle.None;
+                overlayForm.StartPosition = FormStartPosition.CenterParent;
+                overlayForm.ShowInTaskbar = false;
+                overlayForm.BackColor = Color.White;
+                overlayForm.Size = new Size(AddBooking.Width, AddBooking.Height); // Adjust size as needed
+
+                // Position the overlay near the More button
+                //var screenPoint = btnMore.PointToScreen(new Point(0, btnMore.Height));
+                //overlayForm.Location = screenPoint;
+
+                // Subscribe to the MoreMenuControl's ItemDeleted event
+                //AddItemMenu.ItemAdded += (s, args) => LoadEquipmentList();
+
+
+                // Add your MoreMenuControl to the form
+
+                AddBooking.Dock = DockStyle.Fill;
+                overlayForm.Controls.Add(AddBooking);                 
+
+                // Show as a dialog (modal) or use Show() for non-modal
+                overlayForm.ShowDialog();
+
+
+            }
+        }
+
+        private void btnNewListBooking_Click(object sender, EventArgs e)
+        {
+            using (Form overlayForm = new Form())
+            {
+                NewBoookingControl AddBooking = new NewBoookingControl(overlayForm);
+
+                overlayForm.FormBorderStyle = FormBorderStyle.None;
+                overlayForm.StartPosition = FormStartPosition.CenterParent;
+                overlayForm.ShowInTaskbar = false;
+                overlayForm.BackColor = Color.White;
+                overlayForm.Size = new Size(AddBooking.Width, AddBooking.Height); // Adjust size as needed
+
+                // Position the overlay near the More button
+                //var screenPoint = btnMore.PointToScreen(new Point(0, btnMore.Height));
+                //overlayForm.Location = screenPoint;
+
+                AddBooking.islist(); // Call the islist method to set the label text
+
+
+                // Add your MoreMenuControl to the form
+
+                AddBooking.Dock = DockStyle.Fill;
+                overlayForm.Controls.Add(AddBooking);
+
+                // Show as a dialog (modal) or use Show() for non-modal
+                overlayForm.ShowDialog();
+
+
+            }
+        }
     }
 }
