@@ -72,9 +72,9 @@
             this.lblVersion.Location = new System.Drawing.Point(1066, 366);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(340, 37);
+            this.lblVersion.Size = new System.Drawing.Size(342, 37);
             this.lblVersion.TabIndex = 3;
-            this.lblVersion.Text = "Version: 1.00 Alpha 1a";
+            this.lblVersion.Text = "Version: 1.00 Alpha 3a";
             // 
             // btnCalendar
             // 

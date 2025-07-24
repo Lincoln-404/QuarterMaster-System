@@ -118,9 +118,9 @@ namespace QuarterMaster_System
             if (txtListName.Text == string.Empty)
             {
                 txtListName.Text = "Spring Camp 2020";
-                txtListName.ForeColor = Color.Gray;
-                isTypingName = false;
+                txtListName.ForeColor = Color.Gray;                
             }
+            isTypingName = false;
         }
 
         private void txtListOwner_Leave(object sender, EventArgs e)
@@ -128,9 +128,10 @@ namespace QuarterMaster_System
             if (txtListOwner.Text == string.Empty)
             {
                 txtListOwner.Text = "Section or Name";
-                txtListOwner.ForeColor = Color.Gray;
-                isTypingOwner = false;
+                txtListOwner.ForeColor = Color.Gray;                
             }
+            isTypingOwner = false;
+
         }
 
         private void rtbListNotes_Leave(object sender, EventArgs e)
@@ -138,9 +139,9 @@ namespace QuarterMaster_System
             if (rtbListNotes.Text == string.Empty)
             {
                 rtbListNotes.Text = "Optional";
-                rtbListNotes.ForeColor = Color.Gray;
-                isTypingNotes = false;
+                rtbListNotes.ForeColor = Color.Gray;                
             }
+            isTypingNotes = false;
         }
     }
 }
